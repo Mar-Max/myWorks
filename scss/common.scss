@@ -1,0 +1,209 @@
+@charset "UTF-8";
+//---------------- scss -------------------//
+
+//背景图路径
+$bgImagePath: "../images/";
+
+//尺寸
+$fullSize:100%;
+$halfSize:50%;
+
+//字号
+$largeSize:18px;
+$viceSize:16px;
+$normalSize:14px;
+$smallSize:12px;
+
+// 行高
+$normalHeigt:24px;
+
+//间距
+$bigSpace:40px;
+$viceSpace:30px;
+$normalSpace:20px;
+$miniSpace:10px;
+
+//最小像素
+$minPixel:1px;
+
+//颜色
+$white:#fff;
+$black:#000;
+$grey:#ccc;
+$red:#c00;
+$blue:#00c;
+$green:#0c0;
+
+
+//居中设置
+@mixin margin($tb:0, $lr:auto) {
+	margin: $tb $lr;
+}
+//背景设置
+@mixin background($url, $left:center, $right:center, $repeat:no-repeat, $color:transparent, $size:$fullSize) {
+	background: $color url($bgImagePath+$url) $left $right $repeat;
+	background-size: $size;
+}
+//文字设置
+@mixin font($size:$normalSize, $lineHeight:$normalHeigt, $color:$white, $bold:normal, $family:"微软雅黑") {
+	font:$bold #{$size}/#{$lineHeight} $family;
+	color: $color;
+}
+//边框设置
+@mixin borderTop($value:$minPixel, $style:solid, $color:$white) {
+	border-top: $value $style $color;
+}
+@mixin border($value:$minPixel, $color:$white, $style:solid) {
+	border: $value $style $color;
+}
+//圆角
+@mixin borderRadius($value:4px) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+//阴影
+@mixin boxShadow($left:$minPixel, $right:$minPixel, $color:#333) {
+	-webkit-box-shadow: $left $right $color;
+	-moz-box-shadow: $left $right $color;
+	box-shadow: $left $right $color;
+}
+//渐变
+@mixin transition($duration:1s, $function:ease, $property:all) {
+	-moz-transition: $property $duration $function;
+	-webkit-transition: $property $duration $function;
+	-o-transition: $property $duration $function;
+	transition: $property $duration $function;
+}
+//定位
+@mixin position($left:0, $top:0, $pos:absolute, $zIndex:0) {
+	position: $pos;
+	left: $left;
+	top: $top;
+	z-index: $zIndex;
+}
+//宽高
+@mixin WH($width:auto, $height:auto,$display:block) {
+	width: $width;
+	height: $height;
+	display:$display;
+}
+
+//文字排列
+@mixin textAlign($align:center){
+	text-align:$align;
+}
+
+//---------------- Css Reset -------------------//
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul, span {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	background: 0 0;
+}
+h1, h2, h3, h4, h5, h6, strong {
+	font-weight: 400;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:after, blockquote:before, q:after, q:before {
+	content: '';
+	content: none;
+}
+article, aside, dialog, figure, footer, header, nav, section {
+	display: block;
+}
+:focus {
+	outline: 0;
+}
+address, cite, code, dfn, em, i, var, b {
+	font-style: normal;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+}
+input {
+	border: none;
+}
+button, input[type=submit] {
+	cursor: pointer;
+	font-family: 'Microsoft Yahei', Arial, Helvetica, Simsun, sans-serif;
+}
+img {
+	vertical-align: middle;
+	border: 0;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+a:hover, .top-con a:hover {
+	text-decoration: none;
+}
+a:focus {
+	outline: 0;
+	text-decoration: none;
+}
+label {
+	font-weight: 400;
+}
+.clearfix:after, .clearfix:before {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+* html .clearfix, *+html .clearfix {
+	zoom: 1;
+}
+body {
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+.fw {
+	font-weight: bold;
+}
+.over-hidden {
+	overflow: hidden
+}
+input, select {
+	font-family: "Microsoft YaHei";
+}
+
+
+.show{
+	display:block !important;
+}
+.hide{
+	display:none !important;
+}
+
+.visible{
+	visibility:visible !important;
+}
+.hidden{
+	visibility:hidden !important;
+}
