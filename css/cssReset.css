@@ -1,0 +1,99 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+:focus {
+	outline: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+a img, iframe {
+	border: none;
+}
+a, a:visited, a:link, a:active {
+	text-decoration: none;
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+}
+input, textarea, select, button {
+	font-size: 100%;
+	font-family: inherit;
+}
+select {
+	margin: inherit;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+.disinline {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+}
+
+.fw {
+	font-weight: bold;
+}
+
+.over-hidden {
+	overflow: hidden
+}
+
+.show{
+	display:block !important;
+}
+.hide{
+	display:none !important;
+}
+
+.visible{
+	visibility:visible !important;
+}
+.hidden{
+	visibility:hidden !important;
+}
+
+/* == clearfix == */
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	zoom:1;
+}
+.clearfix {
+	display: block;
+}
