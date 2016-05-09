@@ -94,6 +94,21 @@ $green:#0c0;
 	text-align:$align;
 }
 
+// 盒模型重置
+@mixin boxSizing(){
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+// 兼容处理
+@mixin compat($key,$value){
+	-o-#{$key}:$value;
+	-moz-#{$key}:$value;
+	-webkit-#{$key}:$value;
+	#{$key}:$value;
+}
+
 
 //px2rem
 @function px2em($px, $base-font-size: 16px) {
