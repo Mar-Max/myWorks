@@ -109,6 +109,14 @@ $green:#0c0;
 	#{$key}:$value;
 }
 
+// 文字超出隐藏
+@mixin textOverflow($width:100%){
+	display:block;
+	width:$width;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
 
 //px2rem
 @function px2em($px, $base-font-size: 16px) {
